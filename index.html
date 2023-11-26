@@ -30,12 +30,34 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 20px;
         }
 
         footer {
             margin-top: 30px;
             font-size: 14px;
             color: #777;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -46,11 +68,58 @@
 
     <section>
         <p>Feel the magic of winter with our festive website. Explore the snowy landscapes, enjoy the holiday spirit, and have a cup of hot cocoa by the fireplace.</p>
-        <img src="https://example.com/winter-scene.jpg" alt="Winter Scene" style="max-width: 100%; border-radius: 5px; margin-top: 20px;">
+        <img src="https://github.com/dolphin235/web_page/assets/33066453/a21d5b6a-0325-4084-881b-1ed5a43afe2d" alt="Winter Scene">
+    </section>
+
+    <section>
+        <h2>Winter Activities</h2>
+        <p>Choose an activity to explore:</p>
+        <button onclick="showImage('skiing')">Skiing</button>
+        <button onclick="showImage('ice-skating')">Ice Skating</button>
+        <button onclick="showImage('snowboarding')">Snowboarding</button>
+        <button onclick="showImage('winter-walk')">Winter Walk</button>
+        <button onclick="showImage('snowman')">Building a Snowman</button>
+    </section>
+
+    <section id="skiing" style="display: none;">
+        <h2>Skiing</h2>
+        <img src="https://placekitten.com/800/401" alt="Skiing">
+    </section>
+
+    <section id="ice-skating" style="display: none;">
+        <h2>Ice Skating</h2>
+        <img src="https://placekitten.com/800/402" alt="Ice Skating">
+    </section>
+
+    <section id="snowboarding" style="display: none;">
+        <h2>Snowboarding</h2>
+        <img src="https://placekitten.com/800/403" alt="Snowboarding">
+    </section>
+
+    <section id="winter-walk" style="display: none;">
+        <h2>Winter Walk</h2>
+        <img src="https://placekitten.com/800/404" alt="Winter Walk">
+    </section>
+
+    <section id="snowman" style="display: none;">
+        <h2>Building a Snowman</h2>
+        <img src="https://placekitten.com/800/405" alt="Building a Snowman">
     </section>
 
     <footer>
         <p>© 2023 Your Name | Designed with ❄️</p>
     </footer>
+
+    <script>
+        function showImage(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
